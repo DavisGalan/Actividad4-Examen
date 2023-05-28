@@ -1,0 +1,118 @@
+
+<div class="container">
+    <div class="row">
+      <div *ngFor="let item of misdatos; let i=index" class="col-12 col-sm-6 col-md-3 bg-dark text-white
+       shadow rounded" id="milogin">      
+        <div class="col-sm">
+          <img src="assets/12.jpg" class="card-img" alt="...">     
+  
+          <div class="card-footer">
+            <p class="card-title">SE NECESITA : {{item.tipoVehiculo}}</p>
+            <p class="card-text">CANT EJES : {{item.tipoEjes}}</p>
+            <p class="card-text">LUGAR DE CARGUE : {{item.lugarCargue}}</p>
+            <p class="card-text">DESTINO : {{item.lugarDestino}}</p>
+            <p class="card-text">PESO BRUTO : {{item.peso}}</p>        
+  
+    <button type="button" class="btn btn-outline-primary" (click)="Editar(item._id)">
+      Editar</button>
+    <button type="button" class="btn btn-outline-danger" (click)="Eliminar(item._id)">
+      Delete</button>
+        </div>    
+      </div>
+    </div>
+  </div>
+
+  
+<!-- Modal -->
+<div class="row">
+</div>
+<div class="modal fade " id="modaltarjetas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="row m-0 d-flex justify-content-center flex-wrap">
+          <div class="card col-md-10 bg-dark text-white shadow rounded m-1 ">
+            <div class="row g-0">
+
+              <div class="card-body  row m-0 d-flex justify-content-center flex-wrap">
+                <div class="col-md-6">
+                  <img src="http://localhost:3000/imagenes/20.jpg" class="img-fluid rounded-start" width="200px"
+                    alt="400px">
+                </div>
+                <div class="card-body">
+
+                    <div class="card-title">
+                  
+                        <select [(ngModel)]="tipoVehiculo">
+                          <option >Tipo de vehiculo</option>
+                          <option>Cama Baja</option>
+                          <option>Camión Rigido</option>
+                          <option>Camión Rigido</option>
+                          <option>Camión Sencillo</option>
+                          <option>Doble Troque</option>
+                          <option>Estacas</option>
+                          <option>Isotanque</option>
+                          <option>Mula Con Carroseria</option>
+                          <option>Mula Cuatro Manos</option>
+                          <option>Mula Refrigerada</option>
+                          <option>Patineta</option>
+                          <option>Tractocamión</option>
+                          <option>Tractomula</option>
+                          <option>Turbo Sencillo</option>
+                          <option>Turbo Dooble</option>
+                          <option>Remolque</option>
+                          <option>Remolque Articulado</option>
+                          <option>Volqueta Tolva</option>
+                        </select>
+      
+                      </div>
+                      <div class="card-title">
+                        <select [(ngModel)]="tipoEjes" >
+                          <option>Cantidad Ejes</option>
+                          <option>Un Eje</option>
+                          <option>Dos Ejes</option>
+                          <option>Tres Ejes</option>
+                          <!-- <option>2 Ejes / Remolque de 1 eje</option>
+                          <option>3 Ejes / Remolque de 1 eje</option>
+                          <option>3 Ejes / Remolque de 2 Ejes</option>
+                          <option>3 Ejes / Remolque de 3 ejes</option> -->
+                          <option>No Aplica</option>
+                        </select>
+                      </div>
+
+                  <!-- <div class="form-group col-md-14">
+                    <input type="text" class="form-control" placeholder="Tipo Vehiculo" id="tipoVehiculo"
+                      [(ngModel)]="tipoVehiculo">
+                  </div> -->
+                  <div class="form-group col-md-14">
+                    <input type="text" class="form-control" placeholder="Lugar Cargue" id="lugarCargue"
+                      [(ngModel)]="lugarCargue">
+                  </div>
+                  <div class="form-group col-md-14">
+                    <input type="text" class="form-control" placeholder="Lugar Destino" id="lugarDestino"
+                      [(ngModel)]="lugarDestino">
+                  </div>
+                  <div class="form-group col-md-14">
+                    <input type="number" class="form-control" placeholder="Peso Aprox" id="peso" [(ngModel)]="peso">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-outline-primary" *ngIf="idseleccionado != ''"
+          (click)="Actualizar()">Actualizar</button>
+      </div>
+    </div>
+  </div>
+</div>

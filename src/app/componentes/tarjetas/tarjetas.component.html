@@ -1,0 +1,74 @@
+<div class="container" id="container-tarjeta">
+  <div class="row">
+    <div *ngFor="let item of misdatos; let i=index" class="col-12 col-sm-6 col-md-3 bg-dark text-white
+     shadow rounded" id="milogin">      
+      <div class="col-sm">
+        <img src="assets/12.jpg" class="card-img" alt="...">     
+
+        <div class="card-footer">          
+          <p class="card-title">SE NECESITA : {{item.tipoVehiculo}}</p>
+          <p class="card-text">CANT EJES : {{item.tipoEjes}}</p>
+          <p class="card-text">LUGAR DE CARGUE : {{item.lugarCargue}}</p>
+          <p class="card-text">DESTINO : {{item.lugarDestino}}</p>
+          <p class="card-text">PESO BRUTO : {{item.peso}}</p>
+        
+      </div>  
+      <button type="button" class="btn btn-outline-success " (click)="elegirViaje(item)">
+    Aplicar</button>   
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<!-- <div class="row">
+</div>
+<div class="modal fade " id="modaltarjetas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="row m-0 d-flex justify-content-center flex-wrap">
+          <div class="card col-md-10 bg-dark text-white shadow rounded m-1 ">
+            <div class="row g-0">
+
+              <div class="card-body  row m-0 d-flex justify-content-center flex-wrap">
+                <div class="col-md-6">
+                  <img src="http://localhost:3000/imagenes/20.jpg" class="img-fluid rounded-start" width="200px"
+                    alt="400px">
+                </div>
+                <div class="card-body">
+                  <div class="form-group col-md-14">
+                    <input type="text" class="form-control" placeholder="Tipo Vehiculo" id="tipoVehiculo"
+                      [(ngModel)]="tipoVehiculo">
+                  </div>
+                  <div class="form-group col-md-14">
+                    <input type="text" class="form-control" placeholder="Lugar Cargue" id="lugarCargue"
+                      [(ngModel)]="lugarCargue">
+                  </div>
+                  <div class="form-group col-md-14">
+                    <input type="text" class="form-control" placeholder="Lugar Destino" id="lugarDestino"
+                      [(ngModel)]="lugarDestino">
+                  </div>
+                  <div class="form-group col-md-14">
+                    <input type="number" class="form-control" placeholder="Peso Aprox" id="peso" [(ngModel)]="peso">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-outline-primary" *ngIf="idseleccionado != ''"
+          (click)="Actualizar()">Actualizar</button>
+      </div>
+    </div>
+  </div>
+</div> -->

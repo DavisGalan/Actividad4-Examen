@@ -1,0 +1,14 @@
+#milogin {
+    margin-top: 150px;
+    border: solid 1px #ebebeb;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: rgba(69, 77, 116, 0.5) ;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    background-color: rgb(27, 141, 113);
+}
+.row{
+    justify-content: center;
+}

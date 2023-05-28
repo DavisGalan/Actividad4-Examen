@@ -1,0 +1,53 @@
+
+#carouselExampleIndicators {    
+  overflow: hidden;
+  margin: 5px auto;    
+  border-radius: 5px;
+  background-color: black;
+  height: 400px;
+}
+div#container {
+  background-color: rgb(255, 255, 255);
+}
+.display {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  text-align: center;
+  border: 10px;
+  margin-top: -30px;    
+}
+.lead {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: justify;
+}
+
+.card {
+  margin: 5px 5px 5px 5px;
+  padding: 10px;
+  /*border: rgb(47, 48, 48) 2px groove;*/
+  height: 400px;
+}
+
+
+
+
+
+
+.col-sm:hover {
+  box-shadow: 0 5px 15px rgb(rgb(62, 62, 62), rgb(45, 45, 45), rgb(24, 24, 44));
+  transform: translateY(-15px);
+  transition: 1s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

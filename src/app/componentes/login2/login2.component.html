@@ -1,0 +1,23 @@
+<app-menu></app-menu>
+
+<div class="row">
+    <div class="col-10 col-sm-6 col-md-4" id="milogin" id="milogin">
+        <h4 for="exampleInputEmail1">Sesion Admin</h4>
+      <div class="form-group">
+        
+        <label for="exampleInputEmail">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby=
+        "emailHelp"[(ngModel)]=email>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1"[(ngModel)]=password>
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <button type="submit" class="btn btn-primary"(click)="iniciar()">Iniciar Sesion</button>
+  </div>
+  </div>
+
